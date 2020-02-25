@@ -1,0 +1,26 @@
+{ 
+    "First Name": "الاسم الاول",
+    "Please enter first name": "من فضلك ادحل الاسم الاول",
+    "Last Name": "الاسم الاخير",
+    "Please enter last name": "من ",
+    "Email": "البريد الالكتروني",
+    "Phone": "الهاتف",
+    "Please enter your number": "من فضلك ادحل رقم الهاتف",
+    "Age": "العمر",
+    "Please enter your age": "من فضلك ادحل العمر",
+    "Nationality":"الجنسية",
+    "United Arab Emirates": "الامارات العربية المتحدة",
+    "Egypt": "مصرt",
+    "Oman": "عمان",
+    "Place of Residency": "محل الاقامة",
+    "Organization":"المؤسسة",
+    "Please enter organization name": "من فضلك ادحل اسم المؤسسة",
+    "Please enter job name":"من فضلك ادحل اسم الوظيفة ",
+    "Job": "الوظيفة",
+    "Type": "النوع",
+    "Complaint": "شكوي",
+    "Subject": "الموضوع",
+    "Please enter Enter your Subject": "من فضلك اكتب موضوعك",
+    "Message": "الرسالة"
+ }
+ 

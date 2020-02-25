@@ -1,0 +1,27 @@
+{
+    "First Name": "First Name",
+    "Please enter first name": "Please enter first name",
+    "Last Name": "Last Name",
+    "Please enter last name": "Please enter last name",
+    "Email": "Email",
+    "Phone": "Phone",
+    "Please enter your number": "Please enter your number",
+    "Age": "Age",
+    "Please enter your age": "Please enter your age",
+    "Nationality":"Nationality",
+    "United Arab Emirates": "United Arab Emirates",
+    "Egypt": "Egypt",
+    "Oman": "Oman",
+    "Place of Residency": "Place of Residency",
+    "Organization":"Organization",
+    "Please enter organization name": "Please enter organization name",
+    "Please enter job name": "Please enter job name",
+    "Job": "Job",
+    "Type": "Type",
+    "Complaint": "Complaint",
+    "Subject": "Subject",
+    "Please enter Enter your Subject": "Please enter Enter your Subject",
+    "Message": "Message"
+
+
+ }

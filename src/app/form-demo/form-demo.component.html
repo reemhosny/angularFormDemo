@@ -1,0 +1,77 @@
+<div class="my-component container">
+    <div class="row">
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <mat-label translate class="label">First Name</mat-label>
+              <input matInput placeholder="{{ 'Please enter first name' | translate }}">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label translate>Last Name</mat-label>
+                <input matInput placeholder="{{'Please enter last name'| translate}}">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label translate>Email</mat-label>
+                <input translate matInput placeholder="{{'Please enter last name'| translate}}">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label translate>Phone</mat-label>
+                <input translate matInput placeholder="{{'Please enter your number'| translate}}">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label translate>Age</mat-label>
+                <input translate matInput placeholder="{{'Please enter your age'| translate}}">
+              </mat-form-field>
+
+              <mat-form-field>
+                <mat-label translate>Nationality</mat-label>
+                <mat-select [(value)]="selected">
+                  <mat-option translate value="{{'United Arab Emirates' | translate}}">United Arab Emirates</mat-option>
+                  <mat-option translate value="option2">Egypt</mat-option>
+                  <mat-option translate value="option3">Oman</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field>
+                <mat-label translate>Place of Residency</mat-label>
+                <mat-select translate [(value)]="selected">
+                  <mat-option translate >United Arab Emirates</mat-option>
+                  <mat-option translate >Egypt</mat-option>
+                  <mat-option translate >Oman</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label translate>Organization</mat-label>
+                <input translate matInput placeholder="{{'Please enter organization name'| translate}}">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label translate>Job</mat-label>
+                <input translate matInput placeholder="{{'Please enter job name'| translate}}">
+              </mat-form-field>
+
+              <mat-form-field>
+                <mat-label translate>Type</mat-label>
+                <mat-select  [(value)]="selected">
+                  <mat-option translate >Complaint</mat-option>
+                  <mat-option translate >Egypt</mat-option>
+                  <mat-option translate >Oman</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label translate>Subject</mat-label>
+                <input translate matInput placeholder="{{'Please enter Enter your Subject'| translate}}">
+              </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label translate>Message</mat-label>
+              <textarea matInput ></textarea>
+            </mat-form-field>
+          </form>        
+    </div>
+</div>
+
