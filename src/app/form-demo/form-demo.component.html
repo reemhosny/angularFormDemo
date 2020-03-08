@@ -1,28 +1,41 @@
 <div class="my-component container">
     <div class="row">
-        <form class="example-form"  [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <form class="example-form"  [formGroup]="userForm" (ngSubmit)="submitFeedback()">
             <mat-form-field class="example-full-width">
               <mat-label translate class="label">First Name</mat-label>
               <input matInput formControlName="firstName" placeholder="{{ 'Please enter first name' | translate }}">
-            </mat-form-field>
-            <span class="text-danger"
+              <mat-error
                 *ngIf="(registerFormControl.firstName.touched || submitted) && registerFormControl.firstName.errors?.required">
                   Name is required
-              </span>
+            </mat-error>
+            </mat-form-field>
+            
 
             <mat-form-field class="example-full-width">
                 <mat-label translate>Last Name</mat-label>
                 <input matInput formControlName="lastName" placeholder="{{'Please enter last name'| translate}}">
+                <mat-error
+                  *ngIf="(registerFormControl.lastName.touched || submitted) && registerFormControl.lastName.errors?.required">
+                  Name is required
+                </mat-error>
               </mat-form-field>
 
               <mat-form-field class="example-full-width">
                 <mat-label translate>Email</mat-label>
                 <input translate matInput formControlName="email" placeholder="{{'Please enter last name'| translate}}">
+                <mat-error
+                  *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
+                  email is required
+                </mat-error>
               </mat-form-field>
 
               <mat-form-field class="example-full-width">
                 <mat-label translate>Phone</mat-label>
                 <input translate matInput formControlName="phone" placeholder="{{'Please enter your number'| translate}}">
+                <mat-error
+                *ngIf="(registerFormControl.phone.touched || submitted) && registerFormControl.phone.errors?.required">
+                phone is required
+              </mat-error>
               </mat-form-field>
 
               <mat-form-field class="example-full-width">

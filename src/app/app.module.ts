@@ -1,3 +1,4 @@
+import { DataService } from './services/data.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -16,12 +17,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormDemoComponent } from './form-demo/form-demo.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
+
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
-
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import {MatButtonModule} from '@angular/material/button';
         })
     
   ],
-  providers: [TranslateService, User],
+  providers: [TranslateService, User,DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

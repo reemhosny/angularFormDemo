@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { User } from './../user';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
@@ -13,8 +14,11 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 export class FormDemoComponent implements OnInit {
   userForm: FormGroup;
   submitted = false;
+  websiteId = 1;
+  LanguageID= 2; 
+  feedbackType= 1;
 
-  constructor(private formBuilder: FormBuilder, private user:User) { }
+  constructor(private formBuilder: FormBuilder, private user:User , private HttpClient:HttpClient) { }
   
   ngOnInit() {
 
@@ -38,13 +42,29 @@ export class FormDemoComponent implements OnInit {
     return this.userForm.controls;
   }
 
-  onSubmit() {
+  // onSubmit() {
+  //   this.submitted = true;
+  //   if (this.userForm.valid) {
+  //     alert('Form Submitted succesfully!!!\n Check the values in browser console.');
+  //     console.table(this.userForm.value);
+  //   }
+  // }
+  
+  submitFeedback() { 
     this.submitted = true;
     if (this.userForm.valid) {
       alert('Form Submitted succesfully!!!\n Check the values in browser console.');
       console.table(this.userForm.value);
-    }
-  }
-  
+    } 
+    this.HttpClient.get("http://demoserver.tacme.net:3030/MOICDTacsoft/services/FeedbackRestService.svc/SubmitFeedback?"
+      +"WebsiteID=this.websiteId&LanguageID=this.LanguageID&Name=this.userForm.controls['firstNmae'].value&Email=this.userForm.controls['email'].value&PhoneNumber=this.userForm.controls['phone'].value&Age=this.userForm.controls['age'].value&Organization=this.userForm.controls['Organization'].value"+
+      "Nationality=this.userForm.controls['Nationality'].value&Residency=this.userForm.controls['placeofResidency'].value&Subject=this.userForm.controls['subject'].value&message=this.userForm.controls['message'].value&feedbackType=this.feedbackType" ).subscribe(
+       (res: any) => {
+         console.log(res);
+       },
+       err => {
+         console.log(err);
+       })
+ }
 
 }
