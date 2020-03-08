@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { User } from './user';
 
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -36,6 +38,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatSelectModule,
     MatToolbarModule,
     MatButtonModule,
+    ReactiveFormsModule,
     HttpClientModule,
         TranslateModule.forRoot({
             loader: {
@@ -46,7 +49,7 @@ import {MatButtonModule} from '@angular/material/button';
         })
     
   ],
-  providers: [TranslateService],
+  providers: [TranslateService, User],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
